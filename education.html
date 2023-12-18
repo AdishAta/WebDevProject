@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - Adil's Portfolio</title>
+    <link rel="stylesheet" href="styles/education.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" type="text/css" href="styles/print.css" media="print">
+
+</head>
+<body>
+    <header>
+        <div class="prof-img-container">
+            <a href="index.html">
+                <img src="images/profilePic.jpeg" alt="Logo" id="logo">
+            </a>
+        </div>
+        
+        <div class="profile">
+            <div class="profile-info">
+                <h1>Hello, I am Adil!</h1>
+                <p>Computer Science Student at Eotvos Lorand University in Budapest.</p>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="contact-buttons">
+              <div>
+                <a href="https://github.com/adishata" target="_blank">
+                  <img src="images/github_logo.png" alt="github_logo">
+                </a>
+              </div>
+              <div>
+                <a href="https://www.linkedin.com/in/ashidaqi/" target="_blank">
+                  <img src="images/linkedin_logo.png" alt="linkedin_logo">
+                </a>
+              </div>
+              
+            </div>
+            
+            <div class="dark-button">
+                <button>Dark Mode</button>
+            </div>
+        </div>
+        
+
+    </header>
+
+    <nav>
+        <a class="home" href="index.html"><div>Home</div></a></div>
+        <a class="education" href="education.html"><div>
+            Education
+        </div></a>
+        <a class="hobbies" href="hobbies.html"><div>Hobbies</div></a>
+        <a class="projects" href="projects.html"><div>
+            Projects
+        </div></a> 
+    </nav>
+
+
+
+    <section class="motivation">
+        <h2>Motivation</h2>
+        <p>
+            I remember playing all kinds of video games since I was a toddler.
+            However, as any curious kid would think, I asked myself “where do they come from?”
+            and learned the answer after some while. It’s being made.
+            So, that’s how I got a little dream, one day to make a game myself.
+        </p>
+        <section class="game-picture">
+            <div>
+                <div>
+                    <img src="images/minecraft_pic.jpeg" alt="minecraft-picture">
+                </div>
+                <div>
+                    <img src="images/hero.webp" alt="lego-marvel-superheroes-picture">
+                </div>
+            </div>
+    
+            <div>
+                <img src="images/GTASABOX.jpg" alt="GTASA-picture">
+            </div>
+    
+        </section>
+    </section>
+
+    
+    <section class="studying">
+        <h2>Studying</h2>
+        <p>
+            I started my academic journey in CS already in high school when in IT classes
+            we began to learn Java programming language.
+        </p>
+        <p>
+            A little while later I studied Python in my country, and now studying in one of
+            the best Universities in Hungary.
+        </p>
+        <p>
+            ELTE’s ranking :
+            <a href="https://www.elte.hu/en/content/among-the-best-in-the-qs-ranking.t.2030" target="_blank">
+                Among the Best in the QS Ranking
+            </a>
+        </p>
+    </section>
+    <div class="the-image" alt="programming wallpaper"></div>
+
+
+
+    
+
+    <table class="studies-table">
+        <caption><h2>Learning Path</h2></caption>
+        <thead>
+            <tr>
+                <th>Place</th>
+                <th>Field</th>
+                <th>Skills</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <a href="https://www.elte.hu">Eotvos Lorand University</a></td>
+                <td>BSc in Computer Science</td>
+                <td>Functional Programming - OOP - Algorithm and Data Structures - C - C# - HTML&CSS</td>
+            </tr>
+            <tr>
+                <td><a href="http://alatoo.edu.kg/#gsc.tab=0">Ala Too University</a></td>
+                <td>BSc in Computer Science</td>
+                <td>Python - Turkish Language</td>
+            </tr>
+            <tr>
+                <td><a href="https://hkarasaev.edupage.org">Hussein Karasaev High School</a></td>
+                <td>Physical-Mathematical</td>
+                <td>Java - Turkish - Russian</td>
+            </tr>
+            <tr>
+                <td><a href="https://ksla.kg/3d/kok-jar/">KSLA</a></td>
+                <td>Debating</td>
+                <td>Public speech - Quick Research</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <footer>
+        <p>&copy; 2023 Adil. All rights reserved.</p>
+    </footer>
+    <script>
+        let classes = ['body','header','nav','.dark-button','a','.education'];
+        function toggleDarkMode(){
+            classes.forEach(c=>{
+                document.querySelector(c).classList.toggle('dark-mode');
+            })
+        }
+        let isToggled = JSON.parse(localStorage.getItem('daniel')) || false;
+        console.log(JSON.parse(localStorage.getItem('daniel')));
+        console.log(isToggled);
+        (isToggled) && toggleDarkMode();
+        
+        document.addEventListener('DOMContentLoaded', function () {
+        const darkButton = document.querySelector('.dark-button button');
+        const body = document.body;
+
+        darkButton.addEventListener('click', function () {
+            toggleDarkMode();
+            if(isToggled) {
+                isToggled = false;
+            }
+            else{
+                isToggled = true;
+            } 
+            localStorage.setItem('daniel',isToggled);
+            console.log(JSON.parse(localStorage.getItem('daniel')));
+        });
+        });
+    </script>
+</body>
+</html>

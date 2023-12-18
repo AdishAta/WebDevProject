@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page - Adil's Portfolio</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/general.css">
+</head>
+<body>
+    <header>
+        <div class="prof-img-container">
+            <a href="index.html">
+                <img src="images/profilePic.jpeg" alt="Logo" id="logo">
+            </a>
+        </div>
+        
+        <div class="profile">
+            <div class="profile-info">
+                <h1>Hello, I am Adil!</h1>
+                <p>Computer Science Student at Eotvos Lorand University in Budapest.</p>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="contact-buttons">
+              <div>
+                <a href="https://github.com/adishata" target="_blank">
+                  <img src="images/github_logo.png" alt="github_logo">
+                </a>
+              </div>
+              <div>
+                <a href="https://www.linkedin.com/in/ashidaqi/" target="_blank">
+                  <img src="images/linkedin_logo.png" alt="linkedin_logo">
+                </a>
+              </div>
+              
+            </div>
+            
+            <div class="dark-button">
+                <button>Dark Mode</button>
+            </div>
+        </div>
+
+
+    </header>
+
+    <nav>
+        <a class="home" href="index.html"><div>Home</div></a></div>
+        <a class="education" href="education.html"><div>
+            Education
+        </div></a>
+        <a class="hobbies" href="hobbies.html"><div>Hobbies</div></a>
+        <a class="projects" href="projects.html"><div>
+            Projects
+        </div></a> 
+    </nav>
+
+    <section class="about">
+        <h2>About</h2>
+        <div class="about-info">
+            <div class="about-text">
+                <p>
+                    My story always flows around technology and people.
+                    I was born in Bishkek, the capital of a little, though astonishing,
+                    central Asian country called Kyrgyzstan.
+                    I came to Budapest to get my Bachelor’s degree in Computer Science
+                    at Eotvos Lorand University under the SH Scholarship.
+                </p>
+            </div>
+    
+            
+            <div class="about-image">
+                <div class="city">
+                    <img src="images/Bishkek.jpg" alt="Bishkek Image">
+                    <p>Bishkek</p>
+                </div>
+                <div class="city">
+                    <img src="images/Budapest.jpg" alt="Budapest Image">
+                    <p>Budapest</p>
+                </div>
+        </div>
+        
+        </div>
+    </section>
+
+    <section class="offer-container">
+        <h2>What I do/offer?</h2>
+    
+        <div class="offer">
+
+            <div>
+                <h3>
+                    Development
+                </h3>
+            </div>
+            <div>
+                <h3>
+                    Teaching/Mentoring
+                </h3>
+                
+            </div>
+            <div>
+                <h3>
+                    Event organization
+                </h3>
+            </div>
+            <div>
+                <h3>
+                    Cooking
+                </h3>
+            </div>
+            <div>
+                <h3>
+                    Interpretation/Translation
+                </h3>
+            </div>
+            <div>
+                <h3>
+                    Guide
+                </h3>
+            </div>
+
+
+        </div>
+
+    </section>
+    <section class="contact-me-container">
+        <h2>Contact Me</h2>
+        <div class="contact-me">
+            <div class="contacts">
+                <a href="mailto:jetigenovadil@gmail.com"><div>
+                    Email: jetigenovadil@gmail.com
+                </div></a>
+                <a href="tel:+36706351351">
+                    <div>
+                        Phone: +36706351351
+                    </div></a>
+
+            </div>
+            <div class="email">
+
+                <form action="https://formspree.io/f/xnqeapbp" method="POST">
+                    <label>
+                      Your email:
+                      <input type="email" name="email" placeholder="example@gmail.com">
+                    </label>
+                    <p></p>
+                    <label>
+                      Your message:
+                      <textarea name="message"></textarea>
+                    </label>
+                  
+                    <!-- Additional form elements -->
+                  <p></p>
+                    <label>
+                      Do you like the Website?:
+                      <label>
+                        <p></p>
+                        <input type="radio" name="radioGroup" value="option1"> Yes
+                      </label>
+                      <label>
+                        <input type="radio" name="radioGroup" value="option2"> No
+                      </label>
+                    </label>
+                  <p></p>
+                    <label>
+                    
+                      <input type="checkbox" name="checkbox" value="yes"> I accept <a href="https://policies.google.com/privacy?hl=en-US">Terms&Conditions</a>
+                    </label>
+                  
+                    <!-- Reset and submit buttons -->
+                    <div>
+                      <button type="reset">Reset</button>
+                      <button type="submit">Send Me</button>
+                    </div>
+                  </form>
+                  
+                <!-- <h3>Your Request</h3>
+                <input class="email-input" type="text" placeholder="Your E-mail">
+                <input class="request-input" type="text" placeholder="Your Request"> -->
+            </div>
+            
+        </div>
+        
+        
+    </section>
+    
+</form>
+
+    <footer>
+        <p>&copy; 2023 Adil. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let classes = ['body','header','nav','.dark-button','.about-text','.contacts'];
+        function toggleDarkMode(){
+            classes.forEach(c=>{
+                document.querySelector(c).classList.toggle('dark-mode');
+            })
+        }
+        let isToggled = JSON.parse(localStorage.getItem('daniel')) || false;
+        console.log(JSON.parse(localStorage.getItem('daniel')));
+        console.log(isToggled);
+        (isToggled) && toggleDarkMode();
+        
+        document.addEventListener('DOMContentLoaded', function () {
+        const darkButton = document.querySelector('.dark-button button');
+        const body = document.body;
+
+        darkButton.addEventListener('click', function () {
+            toggleDarkMode();
+            if(isToggled) {
+                isToggled = false;
+            }
+            else{
+                isToggled = true;
+            } 
+            localStorage.setItem('daniel',isToggled);
+            console.log(JSON.parse(localStorage.getItem('daniel')));
+        });
+        });
+    </script>
+</body>
+</html>

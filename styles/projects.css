@@ -1,0 +1,31 @@
+.projects{
+  background-color:#223141 ;
+}
+.dark-mode .projects{
+  background-color: #cfd0d0;
+}
+
+iframe{
+  margin-top:20px;
+}
+.project{
+  width:560px;
+  line-height: 30px;
+}
+p{
+  line-height: 30px;
+}
+
+p{
+  margin-bottom: 20px;
+}
+.main{
+  margin:15px 15px
+}
+
+.dark-mode .main a{
+  color: white;
+}
+.dark-mode .main a:visited{
+  color:wheat;
+}

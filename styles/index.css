@@ -1,0 +1,138 @@
+/* Reset some default styles */
+
+
+
+
+
+
+.home{
+  background-color:#223141 ;
+}
+.dark-mode .home{
+  background-color: #cfd0d0;
+}
+.about {
+  display: flex;
+  flex-direction: column; /* Change to column */
+  align-items: center; /* Center horizontally */
+  text-align: center; /* Center text within the section */
+  padding-bottom:20px;
+  
+}
+.about h2{
+  margin:20px 
+}
+.about-info{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+}
+.about-text{
+  margin-top:-30px;
+  margin-right:40px;
+  margin-left:10px;
+  width:340px;
+  line-height:45px;
+  height:fit-content;
+  background-color:#F5F5F5;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  padding: 10px 10px
+}
+.about-text.dark-mode{
+  color:#2C3E50;
+}
+
+.about-image {
+  display: flex;
+  flex-direction: column;
+  line-height: 35px;
+  margin-top: 5px; /* Add some spacing between text and images */
+}
+
+.about-image img {
+  max-width: 100%; /* Make images responsive */
+  width: 250px; /* Adjust the width as needed */
+  margin: 0 10px; /* Add some spacing between images */
+}
+
+.city {
+  text-align: center;
+}
+
+.offer-container{
+  display:grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+.offer{
+  display: flex;
+  flex-direction: column;
+}
+.offer h3{
+  text-align: left;
+  margin-left:20px;
+  margin-top:20px;
+}
+
+.contact-me-container{
+  text-align: center;
+}
+.contact-me{
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.contacts{
+  padding:20px;
+  line-height:50px;
+  width:250px;
+
+}
+
+
+.contacts a{
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+.contacts a:hover{
+  opacity: 0.7;
+}
+.contacts div{
+  color: rgb(87, 85, 85);
+  font-weight: 500;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.15);
+  border-radius: 25px;
+}
+.contacts.dark-mode div{
+  color:#cecece
+}
+
+.email{
+  display: flex;
+  flex-direction: column;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.15);
+  border-radius: 15px;
+  padding: 15px;
+  line-height: 40px;
+}
+.email button{
+  background-color: #223141;
+  transition: opacity 0.15s;
+}
+.email button:hover{
+  opacity: 0.8;
+}
+
+
+
+.button-container {
+  text-align: center;
+}
+
+

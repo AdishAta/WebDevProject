@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hobbies - Adil's Portfolio</title>
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/hobbies.css">
+  <link rel="stylesheet" type="text/css" href="styles/print.css" media="print">
+
+</head>
+
+<body>
+  <header role="banner">
+    <div class="prof-img-container">
+      <a href="index.html">
+        <img src="images/profilePic.jpeg" alt="Logo" id="logo">
+      </a>
+    </div>
+
+    <div class="profile">
+      <div class="profile-info">
+        <h1>Hello, I am Adil!</h1>
+        <p>Computer Science Student at Eotvos Lorand University in Budapest.</p>
+      </div>
+    </div>
+
+    <div class="right-section">
+      <div class="contact-buttons">
+        <div>
+          <a href="https://github.com/adishata" target="_blank">
+            <img src="images/github_logo.png" alt="github_logo">
+          </a>
+        </div>
+        <div>
+          <a href="https://www.linkedin.com/in/ashidaqi/" target="_blank">
+            <img src="images/linkedin_logo.png" alt="linkedin_logo">
+          </a>
+        </div>
+        
+      </div>
+
+      <div class="dark-button">
+        <button aria-label="Toggle Dark Mode">Dark Mode</button>
+      </div>
+    </div>
+  </header>
+
+  <nav role="navigation">
+    <a class="home" href="index.html"><div>Home</div></a>
+    <a class="education" href="education.html"><div>Education</div></a>
+    <a class="hobbies" href="hobbies.html"><div>Hobbies</div></a>
+    <a class="projects" href="projects.html"><div>Projects</div></a>
+  </nav>
+
+  <div class="main">
+    <h2>My Time-Killers</h2>
+
+    <div class="hobbies-section">
+      <div class="hobby">
+        <h3>Basketball</h3>
+        <p>
+          Basketball is one of my favorite hobbies. I enjoy playing and watching the game. Here's a video showcasing some amazing basketball highlights:
+        </p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/d8n9MaYLhnA" allowfullscreen></iframe>
+      </div>
+
+      <div class="hobby">
+        <h3>Chess</h3>
+        <p>
+          Chess is a game that challenges my strategic thinking.
+          You can play with me via <a href="https://friend.chess.com/cTj4a">this link</a> Check out this instructional video on a classic chess strategy:
+        </p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/fGFl4GjVvrA" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <div class="hobby">
+        <h3>Anime</h3>
+        <p>
+          Anime is a fantastic form of entertainment. Here's a video for one of my favorite anime series:
+        </p>
+        <video width="560" height="315" controls>
+            <source src="videos/haikyuu.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          
+      </div>
+
+      <div class="hobby">
+        <h3>Books</h3>
+        <p>
+          Reading is a great way to relax. Check out this review of a popular book in my collection:
+        </p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/2HWViGMGikM" allowfullscreen></iframe>
+      </div>
+
+      <div class="hobby">
+        <h3>Cooking</h3>
+        <p>
+          Cooking is both a skill and a passion. Watch this cooking tutorial for a delicious recipe:
+        </p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/TROZvPHqP1g"allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 Adil. All rights reserved.</p>
+  </footer>
+  
+  <script>
+    let classes = ['body','header','nav','.dark-button','a'];
+        function toggleDarkMode(){
+            classes.forEach(c=>{
+                document.querySelector(c).classList.toggle('dark-mode');
+            })
+        }
+        let isToggled = JSON.parse(localStorage.getItem('daniel')) || false;
+        console.log(JSON.parse(localStorage.getItem('daniel')));
+        console.log(isToggled);
+        (isToggled) && toggleDarkMode();
+        
+        document.addEventListener('DOMContentLoaded', function () {
+        const darkButton = document.querySelector('.dark-button button');
+        const body = document.body;
+
+        darkButton.addEventListener('click', function () {
+            toggleDarkMode();
+            if(isToggled) {
+                isToggled = false;
+            }
+            else{
+                isToggled = true;
+            } 
+            localStorage.setItem('daniel',isToggled);
+            console.log(JSON.parse(localStorage.getItem('daniel')));
+        });
+        });
+  </script>
+</body>
+
+</html>

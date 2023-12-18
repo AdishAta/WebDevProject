@@ -1,0 +1,79 @@
+.dark-mode header {
+  background-color: #333333; /* Dark header background color */
+  color:#ffffff;
+}
+
+.dark-mode body {
+  background-color: #1a1a1a; /* Dark background color */
+  color: #ffffff; /* Light text color */
+}
+
+a.dark-mode{
+  color: #c9d8e2;
+}
+
+/* Add more styles as needed */
+.education{
+  background-color:#223141 ;
+}
+.dark-mode.education{
+  background-color: #cfd0d0;
+}
+
+section{
+  margin:20px 10px;
+  line-height: 35px;
+  text-align: justify;
+  margin: 10px 15px;
+
+}
+section h2{
+  margin-bottom: 15px;
+  text-align: center;
+}
+p{text-align: left;}
+
+.game-picture{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.game-picture img{
+  width: 300px;
+}
+
+.the-image{
+  background-image: url('../images/code_back.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.studies-table {
+  line-height: 60px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+
+.studies-table th, .studies-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+
+.studies-table th {
+  background-color: #3498db; /* Bright blue header background */
+  color: white;
+}
+.dark-mode .studies-table a,.studying a {
+  color:white;
+}
+.dark-mode .studies-table a:visited,.studying a:visited{
+  color: wheat;
+}

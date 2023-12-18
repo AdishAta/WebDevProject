@@ -1,0 +1,10 @@
+
+
+body {
+  font-size: 12pt;
+}
+
+header, nav, footer {
+  display: none; /* hide header, navigation, and footer for printing */
+}
+

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Adil's Portfolio</title>
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/projects.css">
+  <link rel="stylesheet" type="text/css" href="styles/print.css" media="print">
+</head>
+
+<body>
+
+  <header>
+    <div class="prof-img-container">
+      <a href="index.html">
+        <img src="images/profilePic.jpeg" alt="Logo" id="logo">
+      </a>
+    </div>
+
+    <div class="profile">
+      <div class="profile-info">
+        <h1>Hello, I am Adil!</h1>
+        <p>Computer Science Student at Eotvos Lorand University in Budapest.</p>
+      </div>
+    </div>
+
+    <div class="right-section">
+      <div class="contact-buttons">
+        <div>
+          <a href="https://github.com/adishata" target="_blank">
+            <img src="images/github_logo.png" alt="github_logo">
+          </a>
+        </div>
+        <div>
+          <a href="https://www.linkedin.com/in/ashidaqi/" target="_blank">
+            <img src="images/linkedin_logo.png" alt="linkedin_logo">
+          </a>
+        </div>
+        
+      </div>
+
+      <div class="dark-button">
+        <button>Dark Mode</button>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <a class="home" href="index.html"><div>Home</div></a>
+    <a class="education" href="education.html"><div>Education</div></a>
+    <a class="hobbies" href="hobbies.html"><div>Hobbies</div></a>
+    <a class="projects" href="projects.html"><div>Projects</div></a>
+  </nav>
+
+  <section class="main">
+    <h2>My Projects</h2>
+
+    <article class="project">
+      <h3><a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of Life</a></h3>
+      <p>
+        Conway's Game of Life is a cellular automaton devised by mathematician John Conway in 1970.
+        It is a zero-player game, meaning that its progression is determined by its initial state.
+        The universe of the Game of Life is an infinite two-dimensional grid of square cells,
+        each of which can be in one of two states: alive or dead.
+        The state of each cell evolves over time based on simple rules. <a href="https://playgameoflife.com/">Here you can check it out!</a>
+      </p>
+      <figure class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ouipbDkwHWA" allowfullscreen></iframe>
+      </figure>
+
+      <h3><a href="https://github.com/AdishAta/game_of_life">Game of Life's Variation</a></h3>
+      <p>
+        This project is a variation of Conway's Game of Life with additional rules and features.
+      </p>
+      <aside>
+        <p>
+          It was my midterm project on the Python courses in my Home country.
+        </p>
+      </aside>
+      <h4>Additional Rules:</h4>
+
+      <ul>
+        <li>If the number of aliens is bigger in a range of 1 cell (3x3 active field), human has a 33% chance to survive,
+          20% chance to be caught and become an alien, and otherwise, he dies.</li>
+        <li>If the number of people is bigger or equal, the alien has a 50% chance to die in a battle.</li>
+        <li>If the number of aliens on the neighbor cells is more than 2, 33% chance that one more alien will be born.</li>
+        <li>If the number of people on the neighbor cells is more than 1, 80% chance that one more human will be born.</li>
+      </ul>
+    </article>
+
+    <article class="project">
+      <h3><a href="https://github.com/AdishAta/batching">Batch Image Processing for Instagram</a></h3>
+      <p>
+        This project involves batch processing of images for Instagram. [Describe the purpose and functionality of the project,
+        including how the b/w filter and cropping to 1080x1080 size are applied to all images in the "img" folder.
+        Also, mention the addition of a watermark.]
+      </p>
+      <h4>Requirements:</h4>
+      <ul>
+        <li>Apply b/w filter and crop to 1080x1080 size for all images in the "img" folder.</li>
+        <li>Add a watermark (image or text) to the bottom right corner of all images.</li>
+        <li>Include a requirements.txt file.</li>
+      </ul>
+    </article>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Adil. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let classes = ['body','header','nav','.dark-button','.about-text','.contacts','.projects'];
+    function toggleDarkMode(){
+            classes.forEach(c=>{
+                document.querySelector(c).classList.toggle('dark-mode');
+            })
+        }
+        let isToggled = JSON.parse(localStorage.getItem('daniel')) || false;
+        console.log(JSON.parse(localStorage.getItem('daniel')));
+        console.log(isToggled);
+        (isToggled) && toggleDarkMode();
+        
+        document.addEventListener('DOMContentLoaded', function () {
+        const darkButton = document.querySelector('.dark-button button');
+        const body = document.body;
+
+        darkButton.addEventListener('click', function () {
+            toggleDarkMode();
+            if(isToggled) {
+                isToggled = false;
+            }
+            else{
+                isToggled = true;
+            } 
+            localStorage.setItem('daniel',isToggled);
+            console.log(JSON.parse(localStorage.getItem('daniel')));
+        });
+        });
+  </script>
+
+</body>
+
+</html>
